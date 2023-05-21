@@ -1,0 +1,22 @@
+#changing window focus
+cmd+shift - j : yabai -m window --focus south
+cmd+shift - k : yabai -m window --focus north
+cmd+shift - h : yabai -m window --focus west
+cmd+shift - l : yabai -m window --focus east
+
+#modifying layout of screen
+#cmd - r : yabai -m space --rotate 270
+cmd+shift - a : yabai -m space --mirror y-axis
+cmd+shift - d : yabai -m space --mirror y-axis
+cmd+shift - w : yabai -m space --mirror x-axis
+cmd+shift - s : yabai -m space --mirror x-axiscmd
+cmd+shift - p : yabai -m window --toggle float --grid 4:4:1:1:2:2
+cmd+shift - m : yabai -m window --toggle zoom-fullscreen
+
+cmd+shift - o : yabai -m window --space next;
+cmd + shift - u : yabai -m window --space prev;
+
+cmd + shift - f : brew services stop yabai;
+cmd + shift - g : brew services start yabai;
+
+cmd+shift - r : yabai -m window first --swap next && yabai -m window first --swap last
