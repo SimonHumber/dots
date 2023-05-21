@@ -33,7 +33,7 @@ mason_null_ls.setup({
 	ensure_installed = {
 		"stylua",
 		"prettierd",
-		"black",
+		"autopep8",
 		"shfmt",
 		"gofumpt",
 		"google-java-format",

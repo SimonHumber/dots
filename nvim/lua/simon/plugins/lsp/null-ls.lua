@@ -10,9 +10,10 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
 	sources = {
+		--last in order will take precedence
 		formatting.clang_format, -- c, cpp, c#, json, java, js
-		formatting.prettierd, --html, css, json, js
-		formatting.black, --python
+		formatting.prettierd, --html, css, json, js, ts
+		formatting.autopep8, --python
 		formatting.google_java_format, --java
 		formatting.shfmt, --sh
 		formatting.stylua, --lua
