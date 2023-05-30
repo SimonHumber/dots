@@ -6,7 +6,7 @@ cmd+shift - l : yabai -m window --focus east
 
 #modifying layout of screen
 cmd+shift - s : yabai -m space --rotate 270
-cmd+shift - a : yabai -m space --mirror y-axis
+cmd+shift - d : yabai -m space --mirror y-axis
 cmd+shift - w : yabai -m space --mirror x-axis
 cmd+shift - s : yabai -m space --mirror x-axiscmd
 cmd+shift - p : yabai -m window --toggle float --grid 4:4:1:1:2:2

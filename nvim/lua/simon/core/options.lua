@@ -3,7 +3,7 @@ local opt = vim.opt -- for conciseness
 opt.guicursor = "i:block"
 
 -- line numbers
-opt.relativenumber = true
+opt.relativenumber = false
 opt.number = true
 opt.tabstop = 2
 opt.shiftwidth = 2

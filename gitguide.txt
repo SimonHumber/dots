@@ -1,0 +1,43 @@
+git init (create new branch)
+
+git branch -m master main (rename master branch to main)
+
+nvim .gitignore (add any files you don't want to git)
+
+git status (check status of git)
+
+git add -A (stage all files and dir)
+
+git commit -m (commit with a message)
+
+git branch name (create new branch)
+
+git branch -a (show list of local branches)
+
+git checkout -b name (create new branch and switch to it)
+
+git checkout name (switch to branch)
+
+git remote add origin git-url (add remote repo)
+
+git remote -v (verify remote repos)
+
+git push -u origin branchname (push to remote repo, branch name optional)
+
+git fetch origin branchname (fetch from branch)
+
+git merge origin branchname (merge from branch)
+
+git rm -rf .git (delete local repo, will also remove remote repo)
+
+git remote rm branchname (remove remote repo)
+
+git remote rename oldname newname (rename branch)
+
+git rm --cached filename (remove file from git tree)
+
+git branch --delete branchname (remove git banch)
+
+git ls-files (check files in git)
+
+//github rejects files larger than 100mb. Must use git LFS for large files

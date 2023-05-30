@@ -36,7 +36,9 @@ keymap.set("n", "<S-CR>", "O<ESC>")
 --comment out single lines
 keymap.set("n", "<leader>;", ":CommentToggle<CR>")
 
---remap hjkl in insert mode to move cursor
+--insert mode
+keymap.set("i", "<C-b>", "<Left>")
+keymap.set("i", "<C-f>", "<Right>")
 keymap.set("i", "<C-h>", "<Left>")
 keymap.set("i", "<C-j>", "<Down>")
 keymap.set("i", "<C-k>", "<Up>")

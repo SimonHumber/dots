@@ -5,4 +5,4 @@ install neovim
 install yabai
 install skhd
 
-rebind caps lock to ctrl
+rebind caps lock to esc and swap fn and ctrl
