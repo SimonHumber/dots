@@ -46,7 +46,6 @@ keymap.set("i", "<C-l>", "<Right>")
 
 --toggle term
 keymap.set("t", "<esc>", [[<C-\><C-n>]])
-keymap.set("t", "<C-c>", [[<C-c><C-\><C-n>]])
 
 --dadbod
 keymap.set("n", "<leader>du", ":DBUIToggle<CR>")

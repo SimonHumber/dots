@@ -8,7 +8,7 @@ vim.g.nightflyTransparent = true
 require("tokyonight").setup({
 	transparent = "true",
 })
-local status, _ = pcall(vim.cmd, "colorscheme tokyonight-moon")
+local status, _ = pcall(vim.cmd, "colorscheme nightfly")
 if not status then
 	print("Color scheme not found!")
 	return
