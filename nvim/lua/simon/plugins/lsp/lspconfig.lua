@@ -12,7 +12,19 @@ local keymap = vim.keymap
 
 --enable keybinds for available lsp servers
 local on_attach = function(client, bufnr) end
-keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+keymap.set("n", "<space>gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+keymap.set("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
+keymap.set("n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
+keymap.set("n", "<space>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
+keymap.set("n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
+keymap.set("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+keymap.set("n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+keymap.set("n", "<space>gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+keymap.set("n", "<space>o", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+keymap.set("n", "<space>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 
 --used to enable autocompletion
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
