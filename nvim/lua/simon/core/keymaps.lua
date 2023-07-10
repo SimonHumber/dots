@@ -51,5 +51,5 @@ keymap.set("t", "<esc>", [[<C-\><C-n>]])
 keymap.set("n", "<leader>du", ":DBUIToggle<CR>")
 
 --center page when going up and down
-keymap.set("n", "<C-u>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "<C-d>", "<C-d>zz")
