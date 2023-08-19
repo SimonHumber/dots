@@ -57,9 +57,6 @@ return require("packer").startup(function(use)
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
 
-	-- live server plugin
-	use("manzeloth/live-server")
-
 	--managing and installing lsp servers
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")

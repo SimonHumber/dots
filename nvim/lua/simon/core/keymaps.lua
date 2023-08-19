@@ -23,10 +23,6 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 
---liveserver
-keymap.set("n", "<leader>lsg", ":LiveServer start<cr>")
-keymap.set("n", "<leader>lss", ":LiveServer stop<cr>")
-
 keymap.set("n", "<leader>p", ":w<CR>:!time python3 %<CR>")
 
 --create linebreaks in normal mode
