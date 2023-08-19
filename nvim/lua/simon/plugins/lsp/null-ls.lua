@@ -17,9 +17,9 @@ null_ls.setup({
 		formatting.google_java_format, --java
 		formatting.shfmt, --sh
 		formatting.stylua, --lua
-		formatting.sqlfmt, --sql
-		formatting.gofumpt, -- go
-		formatting.rustfmt, -- rust
+		--formatting.sqlfmt, --sql
+		--formatting.gofumpt, -- go
+		--formatting.rustfmt, -- rust
 	},
 	on_attach = function(current_client, bufnr)
 		if current_client.supports_method("textDocument/formatting") then
