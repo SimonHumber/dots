@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 toggleterm.setup({
-	open_mapping = [[<Tab>n]],
+	open_mapping = [[<f5>]],
 	direction = "horizontal",
 	size = 20,
 	shade_terminals = false,
