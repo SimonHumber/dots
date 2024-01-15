@@ -43,9 +43,11 @@ keymap.set("i", "<C-l>", "<Right>")
 --toggle term
 keymap.set("t", "<esc>", [[<C-\><C-n>]])
 
---dadbod
-keymap.set("n", "<leader>du", ":DBUIToggle<CR>")
-
 --center page when going up and down
 keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "<C-d>", "<C-d>zz")
+
+--dap
+keymap.set("n", "<leader>dt", ":lua require('dapui').toggle()<CR>")
+keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>")
+keymap.set("n", "<leader>dc", ":DapContinue<CR>")
