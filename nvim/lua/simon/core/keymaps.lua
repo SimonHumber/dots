@@ -31,6 +31,7 @@ keymap.set("n", "<S-CR>", "O<ESC>")
 
 --comment out single lines
 keymap.set("n", "<leader>;", ":CommentToggle<CR>")
+keymap.set("v", "<leader>;", ":CommentToggle<CR>")
 
 --insert mode
 keymap.set("i", "<C-b>", "<Left>")
