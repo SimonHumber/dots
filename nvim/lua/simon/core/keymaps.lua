@@ -7,6 +7,7 @@ keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- equalize split windows
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- close current split window
+keymap.set("n", "<leader>sb", ":set scb!<CR>") -- close current split window
 
 keymap.set("n", "<leader>t", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>w", ":tabclose<CR>") -- close current tab
