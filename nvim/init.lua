@@ -17,5 +17,5 @@ require("simon.plugins.comment")
 require("simon.plugins.toggleterm")
 require("simon.plugins.dapui")
 --indent blank line
--- require("simon.plugins.indent")
+require("simon.plugins.indent")
 --require("simon.plugins.lsp.java")

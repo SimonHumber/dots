@@ -34,3 +34,12 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 		},
 	}
 end
+require("dap").configurations.c = {
+	{
+		type = "C",
+		request = "launch",
+		program = "%{file}",
+		name = "Launch file",
+		cwd = "${workspaceFolder}",
+	},
+}

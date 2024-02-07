@@ -54,7 +54,7 @@ return require("packer").startup(function(use)
 
 	--dap
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
-	use({ "jay-babu/mason-nvim-dap.nvim" })
+	use({ "jay-babu/mason-nvim-dap.nvim", dependencies = { "williamboman/mason.nvim", "mfussenegger/nvim-dap" } })
 	use("mfussenegger/nvim-dap-python")
 	use("mxsdev/nvim-dap-vscode-js")
 	use({
