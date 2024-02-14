@@ -296,6 +296,11 @@ _G.packer_plugins = {
     path = "/Users/simontran/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["solarized-osaka.nvim"] = {
+    loaded = true,
+    path = "/Users/simontran/.local/share/nvim/site/pack/packer/start/solarized-osaka.nvim",
+    url = "https://github.com/craftzdog/solarized-osaka.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/simontran/.local/share/nvim/site/pack/packer/start/telescope.nvim",

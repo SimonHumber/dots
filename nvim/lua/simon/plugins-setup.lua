@@ -12,6 +12,7 @@ return require("packer").startup(function(use)
 
 	-- THEMES
 	-- to install: solarized and noctis
+	use("craftzdog/solarized-osaka.nvim")
 	use("folke/tokyonight.nvim")
 	use("Mofiqul/dracula.nvim")
 	use("ellisonleao/gruvbox.nvim")

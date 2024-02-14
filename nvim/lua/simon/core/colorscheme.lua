@@ -19,7 +19,10 @@ require("dracula").setup({
 require("nightfox").setup({ options = {
 	transparent = true,
 } })
-local status, _ = pcall(vim.cmd, "colorscheme moonfly")
+require("solarized-osaka").setup({
+	transparent = false,
+})
+local status, _ = pcall(vim.cmd, "colorscheme solarized-osaka")
 if not status then
 	print("Color scheme not found!")
 	return
