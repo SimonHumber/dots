@@ -11,10 +11,11 @@ cmd+shift - w : yabai -m space --mirror x-axis
 cmd+shift - p : yabai -m window --toggle float --grid 4:4:1:1:2:2
 cmd+shift - m : yabai -m window --toggle zoom-fullscreen
 
-cmd+shift - o : yabai -m window --space next;
-cmd + shift - u : yabai -m window --space prev;
+cmd+shift - o : yabai -m window --space next; yabai -m window --focus recent
+cmd + shift - u : yabai -m window --space prev; yabai -m window --focus recent
 
-cmd + shift - f : brew services stop yabai;
-cmd + shift - g : brew services start yabai;
+cmd + shift - f : yabai --start-service
+cmd + shift - g : yabai --stop-service
 
+#rotate big window when 3 windows are on screen
 cmd+shift - r : yabai -m window first --swap next && yabai -m window first --swap last
