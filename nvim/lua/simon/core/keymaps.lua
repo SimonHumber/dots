@@ -54,3 +54,6 @@ keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<leader>dt", ":lua require('dapui').toggle()<CR>")
 keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>")
 keymap.set("n", "<leader>dc", ":DapContinue<CR>")
+
+keymap.set("", "<ScrollWheelRight>", "<Nop>", { noremap = true, silent = true })
+keymap.set("", "<ScrollWheelLeft>", "<Nop>", { noremap = true, silent = true })
