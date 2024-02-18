@@ -1,8 +1,11 @@
 Install homebrew
 install xcode
-install iterm2
+install alacritty
 install neovim
 install yabai
 install skhd
 
-rebind caps lock to esc and swap fn and ctrl
+KEYBOARD:
+rebind caps lock to esc
+swap fn and ctrl
+increase key repeat rate and delay until repeat

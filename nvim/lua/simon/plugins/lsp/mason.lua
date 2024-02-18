@@ -24,8 +24,6 @@ mason_lspconfig.setup({
 		"cssls",
 		"bashls",
 		"jdtls",
-		--"gopls",
-		--"rust_analyzer",
 	},
 })
 
@@ -36,8 +34,6 @@ mason_null_ls.setup({
 		"autopep8",
 		"shfmt",
 		"google-java-format",
-		--"rustfmt",
-		--"gofumpt",
 		"clang-format",
 	},
 })

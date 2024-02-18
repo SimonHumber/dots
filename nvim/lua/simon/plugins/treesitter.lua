@@ -27,8 +27,6 @@ treesitter.setup({
 		"html",
 		"lua",
 		"gitignore",
-		"rust",
-		"go",
 		"c",
 		"cpp",
 	},
