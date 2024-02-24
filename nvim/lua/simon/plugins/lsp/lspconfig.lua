@@ -59,11 +59,6 @@ lspconfig["pyright"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-lspconfig["jsonls"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
 lspconfig["jdtls"].setup({
 	filetypes = { "java" },
 	cmd = { "/Users/simontran/.local/share/nvim/mason/packages/jdtls/jdtls" },
