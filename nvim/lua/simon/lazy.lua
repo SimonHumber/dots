@@ -32,6 +32,7 @@ require("lazy").setup({
 	"EdenEast/nightfox.nvim",
 	{ "shaunsingh/nord.nvim", as = "nordtheme" },
 	"sainnhe/everforest",
+
 	"lukas-reineke/indent-blankline.nvim", --indent lines
 	"terrortylor/nvim-comment", --commenter
 	"christoomey/vim-tmux-navigator",
@@ -65,9 +66,11 @@ require("lazy").setup({
 	"hrsh7th/cmp-nvim-lsp",
 	"jose-elias-alvarez/typescript.nvim",
 	"onsails/lspkind.nvim",
+	"nvimdev/lspsaga.nvim",
 	--fomatting and linting
-	"jose-elias-alvarez/null-ls.nvim",
-	"jayp0521/mason-null-ls.nvim",
+	"stevearc/conform.nvim",
+	-- "jose-elias-alvarez/null-ls.nvim",
+	-- "jayp0521/mason-null-ls.nvim",
 	--treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
