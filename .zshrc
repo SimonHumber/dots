@@ -168,6 +168,7 @@ nvim() {
 }
 # keybindgs
 bindkey -s '^D' ''
+bindkey -s '^S' ''
 
 if [ -z "$TERMINFO" ] && [ -z "$TERM_PROGRAM" ]; then
   export TERM_PROGRAM="Alacritty"
