@@ -66,7 +66,6 @@ require("lazy").setup({
 	"hrsh7th/cmp-nvim-lsp",
 	"jose-elias-alvarez/typescript.nvim",
 	"onsails/lspkind.nvim",
-	"nvimdev/lspsaga.nvim",
 	--fomatting and linting
 	"stevearc/conform.nvim",
 	-- "jose-elias-alvarez/null-ls.nvim",
