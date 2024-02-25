@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	{ import = "simon.plugins.dadbod" },
 	"mfussenegger/nvim-jdtls",
 
 	"akinsho/toggleterm.nvim",
@@ -32,6 +33,7 @@ require("lazy").setup({
 	"EdenEast/nightfox.nvim",
 	{ "shaunsingh/nord.nvim", as = "nordtheme" },
 	"sainnhe/everforest",
+	"talha-akram/noctis.nvim",
 
 	"lukas-reineke/indent-blankline.nvim", --indent lines
 	"terrortylor/nvim-comment", --commenter
@@ -66,10 +68,9 @@ require("lazy").setup({
 	"hrsh7th/cmp-nvim-lsp",
 	"jose-elias-alvarez/typescript.nvim",
 	"onsails/lspkind.nvim",
-	--fomatting and linting
+	--fomatting
 	"stevearc/conform.nvim",
-	-- "jose-elias-alvarez/null-ls.nvim",
-	-- "jayp0521/mason-null-ls.nvim",
+
 	--treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",

@@ -29,6 +29,7 @@ treesitter.setup({
 		"gitignore",
 		"c",
 		"cpp",
+		"sql",
 	},
 	-- auto install above language parsers
 	auto_install = true,

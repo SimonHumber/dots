@@ -57,3 +57,6 @@ keymap.set("n", "<leader>dc", ":DapContinue<CR>")
 
 keymap.set("", "<ScrollWheelRight>", "<Nop>", { noremap = true, silent = true })
 keymap.set("", "<ScrollWheelLeft>", "<Nop>", { noremap = true, silent = true })
+
+--dadbod
+keymap.set("n", "<leader>da", ":DBUIToggle<CR>")

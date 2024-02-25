@@ -1,6 +1,6 @@
-require("simon.lazy")
 require("simon.core.options")
 require("simon.core.keymaps")
+require("simon.lazy")
 require("simon.core.colorscheme")
 require("simon.plugins.nvim-tree")
 require("simon.plugins.lualine")
