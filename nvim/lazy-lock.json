@@ -31,8 +31,8 @@
   "nvim-dap": { "branch": "master", "commit": "fc880e82059eb21c0fa896be60146e5f17680648" },
   "nvim-dap-python": { "branch": "master", "commit": "66560f0ebddf96604f7037e1efad3ba6942761e6" },
   "nvim-dap-ui": { "branch": "master", "commit": "9720eb5fa2f41988e8770f973cd11b76dd568a5d" },
-  "nvim-dap-vscode-js": { "branch": "main", "commit": "03bd29672d7fab5e515fc8469b7d07cc5994bbf6" },
   "nvim-jdtls": { "branch": "master", "commit": "382b9f625861f47d95876bcfb4c261f3b96077cb" },
+  "nvim-lint": { "branch": "master", "commit": "85fe14d080d902dcc566461f0205495d0c153372" },
   "nvim-lspconfig": { "branch": "master", "commit": "b8751ff9ac9fd6ce253e0653d898de02e54040d5" },
   "nvim-tree.lua": { "branch": "master", "commit": "d52fdeb0a300ac42b9cfa65ae0600a299f8e8677" },
   "nvim-treesitter": { "branch": "master", "commit": "9896ef5f701cc8258c4f04c6944b77e7cfa244e3" },
@@ -52,6 +52,5 @@
   "vim-moonfly-colors": { "branch": "master", "commit": "a1a0dfc621f41ffb4e98a813e021ba41e8199adc" },
   "vim-nightfly-colors": { "branch": "master", "commit": "56fe47bd16272d9644fd9946a2596fa2c3905c35" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
-  "vim-tmux-navigator": { "branch": "master", "commit": "38b1d0402c4600543281dc85b3f51884205674b6" },
-  "vscode-js-debug": { "branch": "main", "commit": "7308ed42b08fab3d668b91d91eacdf40fb29a4df" }
+  "vim-tmux-navigator": { "branch": "master", "commit": "38b1d0402c4600543281dc85b3f51884205674b6" }
 }
