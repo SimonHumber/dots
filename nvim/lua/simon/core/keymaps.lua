@@ -32,16 +32,8 @@ keymap.set("n", "<CR>", "o<ESC>")
 keymap.set("n", "<S-CR>", "O<ESC>")
 
 --comment
-keymap.set("n", "<leader>l", ":CommentToggle<CR>")
-keymap.set("v", "<leader>l", ":CommentToggle<CR>")
-
---insert mode
-keymap.set("i", "<C-b>", "<Left>")
-keymap.set("i", "<C-f>", "<Right>")
-keymap.set("i", "<C-h>", "<Left>")
-keymap.set("i", "<C-j>", "<Down>")
-keymap.set("i", "<C-k>", "<Up>")
-keymap.set("i", "<C-l>", "<Right>")
+keymap.set("n", "<leader>/", ":CommentToggle<CR>")
+keymap.set("v", "<leader>/", ":CommentToggle<CR>")
 
 --toggle term
 keymap.set("t", "<esc>", [[<C-\><C-n>]])
