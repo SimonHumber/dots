@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{ import = "simon.plugins.dadbod" },
+	"norcalli/nvim-colorizer.lua",
 	"mfussenegger/nvim-jdtls",
 
 	"akinsho/toggleterm.nvim",
