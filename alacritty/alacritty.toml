@@ -13,4 +13,4 @@ decorations="None"
 transparent_background_colors = true
 
 [mouse]
-hide_when_typing=true
+hide_when_typing=false

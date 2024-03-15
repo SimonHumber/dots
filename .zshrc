@@ -168,11 +168,15 @@ nvim() {
 }
 # keybindgs
 bindkey -s '^D' ''
-bindkey -s '^S' ''
+# bindkey '^R' .history-incremental-search-backward
+# bindkey '^S' .history-incremental-search-forward
+bindkey '^P' .up-line-or-history
+bindkey '^N' .down-line-or-history
+# bindkey -s '^S' ''
 
 if [ -z "$TERMINFO" ] && [ -z "$TERM_PROGRAM" ]; then
   export TERM_PROGRAM="Alacritty"
 fi
-# zprof
 alias mongo="brew services start mongodb-community"
 export EDITOR=nvim
+# zprof
