@@ -59,14 +59,14 @@ lspconfig["pyright"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
---jdtls setup must be empty so that nvim-jdtls can work. Cannot have both clients running
-lspconfig["jdtls"].setup({
-	-- filetypes = { "java" },
-	-- cmd = { "/Users/simontran/.local/share/nvim/mason/packages/jdtls/jdtls" },
-	-- root_dir = lspconfig.util.root_pattern("*.java"),
-	-- capabilities = capabilities,
-	-- on_attach = on_attach,
-})
+--cannot have both lspconfig and nvim-jdtls running at the same time
+-- lspconfig["jdtls"].setup({
+-- 	filetypes = { "java" },
+-- 	 cmd = { "/Users/simontran/.local/share/nvim/mason/packages/jdtls/jdtls" },
+-- 	root_dir = lspconfig.util.root_pattern("gradlew"),
+-- 	capabilities = capabilities,
+-- 	on_attach = on_attach,
+-- })
 
 lspconfig["clangd"].setup({
 	capabilities = capabilities,

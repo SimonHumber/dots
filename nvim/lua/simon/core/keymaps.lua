@@ -16,6 +16,7 @@ keymap.set("n", "<leader>`", ":tabp<CR>")
 
 --file explorer
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>fe", ":NvimTreeFindFile<CR>")
 
 --fuzzyfinder and telescoper
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")

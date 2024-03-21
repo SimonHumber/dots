@@ -61,7 +61,12 @@ local config = {
 		bundles = {},
 	},
 }
-require("jdtls").start_or_attach(config)
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "java",
+	callback = function()
+		require("jdtls").start_or_attach(config)
+	end,
+})
 
 -- vim.keymap.set('n', '<leader>co', "<Cmd>lua require'jdtls'.organize_imports()<CR>", { desc = 'Organize Imports' })
 -- vim.keymap.set('n', '<leader>crv', "<Cmd>lua require('jdtls').extract_variable()<CR>", { desc = 'Extract Variable' })
