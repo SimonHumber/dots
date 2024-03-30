@@ -71,6 +71,8 @@ require("lazy").setup({
 	"onsails/lspkind.nvim",
 	--fomatting
 	"stevearc/conform.nvim",
+	--linting
+	"mfussenegger/nvim-lint",
 
 	--treesitter
 	{

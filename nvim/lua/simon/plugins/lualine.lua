@@ -25,6 +25,6 @@ local lualine_nightfly = require("lualine.themes.nightfly")
 -- }
 lualine.setup({
 	options = {
-		theme = "auto",
+		theme = lualine_nightfly,
 	},
 })

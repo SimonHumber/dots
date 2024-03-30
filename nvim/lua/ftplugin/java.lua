@@ -2,7 +2,18 @@ local home = os.getenv("HOME")
 local workspace_path = home .. "/.local/share/nvim/jdtls-workspace/"
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 local workspace_dir = workspace_path .. project_name
-
+local bundles = {
+	vim.fn.glob(
+		home
+			.. ".local/share/nvim/mason/packages/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-*.jar",
+		1
+	),
+}
+-- //for junit, TODO
+vim.list_extend(
+	bundles,
+	vim.split(vim.fn.glob(home .. "/.local/share/nvim/mason/packages/java-test/extension/server/*.jar", 1), "\n")
+)
 local status, jdtls = pcall(require, "jdtls")
 if not status then
 	return
@@ -58,9 +69,12 @@ local config = {
 	},
 
 	init_options = {
-		bundles = {},
+		bundles = bundles,
 	},
 }
+-- require("jdtls").test_class()
+-- require("jdtls").test_nearest_method()
+-- require("jdtls.dap").setup_dap_main_class_configs()
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "java",
 	callback = function()
@@ -68,6 +82,8 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+-- vim.keymap.set("n", "<leader>dj", "<Cmd>lua require'jdtls'.test_class()<CR>", { desc = "Organize Imports" })
+-- vim.keymap.set("n", "<leader>dg", "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", { desc = "Organize Imports" })
 -- vim.keymap.set('n', '<leader>co', "<Cmd>lua require'jdtls'.organize_imports()<CR>", { desc = 'Organize Imports' })
 -- vim.keymap.set('n', '<leader>crv', "<Cmd>lua require('jdtls').extract_variable()<CR>", { desc = 'Extract Variable' })
 -- vim.keymap.set('v', '<leader>crv', "<Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>", { desc = 'Extract Variable' })

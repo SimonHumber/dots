@@ -12,7 +12,7 @@ treesitter.setup({
 	},
 	-- enable indentation
 	-- disabled indentation because does not work well with pyright lsp auto-indent
-	indent = { enable = false },
+	indent = { enable = true },
 	-- enable autotagging (w/ nvim-ts-autotag plugin)
 	autotag = { enable = true },
 	-- ensure these language parsers are installed
@@ -30,6 +30,8 @@ treesitter.setup({
 		"c",
 		"cpp",
 		"sql",
+		"kotlin",
+		"tsx",
 	},
 	-- auto install above language parsers
 	auto_install = true,
