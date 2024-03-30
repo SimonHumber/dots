@@ -26,8 +26,6 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 
-keymap.set("n", "<leader>p", ":w<CR>:!time python3 %<CR>")
-
 --create linebreaks in normal mode
 keymap.set("n", "<CR>", "o<ESC>")
 keymap.set("n", "<S-CR>", "O<ESC>")
@@ -47,6 +45,9 @@ keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<leader>dt", ":lua require('dapui').toggle()<CR>")
 keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>")
 keymap.set("n", "<leader>dc", ":DapContinue<CR>")
+keymap.set("n", "<leader>dc", ":DapContinue<CR>")
+keymap.set("n", "<leader>o", ":DapStepOver<CR>")
+keymap.set("n", "<leader>i", ":DapStepIn<CR>")
 
 keymap.set("", "<ScrollWheelRight>", "<Nop>", { noremap = true, silent = true })
 keymap.set("", "<ScrollWheelLeft>", "<Nop>", { noremap = true, silent = true })
