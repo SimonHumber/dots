@@ -2,7 +2,7 @@ local setup, conform = pcall(require, "conform")
 if not setup then
 	return
 end
-
+local sql_config_file = os.getenv("HOME") .. "/.config/sql_formatter/sql_formatter.json"
 conform.setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
@@ -19,6 +19,13 @@ conform.setup({
 		kotlin = { "ktlint" },
 	},
 })
+conform.formatters.sql_formatter = {
+	prepend_args = {
+		"--config",
+		'{"language":"postgresql","keywordCase":"upper","dataTypeCase":"upper","functionCase":"upper"}',
+		-- "indentStyle":"tabularLeft",
+	},
+}
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*",
 	callback = function(args)

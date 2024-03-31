@@ -12,12 +12,14 @@ mason.setup()
 
 mason_lspconfig.setup({
 	ensure_installed = {
-		"lua_ls",
 		"html",
-		"tsserver",
-		"pyright",
 		"cssls",
-		"bashls",
+		"clangd",
 		"jdtls",
+		"kotlin_language_server",
+		"tsserver",
+		"lua_ls",
+		"pyright",
+		"bashls",
 	},
 })
