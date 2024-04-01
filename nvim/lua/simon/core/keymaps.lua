@@ -31,8 +31,8 @@ keymap.set("n", "<CR>", "o<ESC>")
 keymap.set("n", "<S-CR>", "O<ESC>")
 
 --comment
-keymap.set("n", "<leader>/", ":CommentToggle<CR>")
-keymap.set("v", "<leader>/", ":CommentToggle<CR>")
+keymap.set("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)")
+keymap.set("v", "<leader>/", "<Plug>(comment_toggle_linewise_visual)")
 
 --toggle term
 keymap.set("t", "<esc>", [[<C-\><C-n>]])
@@ -45,9 +45,9 @@ keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<leader>dt", ":lua require('dapui').toggle()<CR>")
 keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>")
 keymap.set("n", "<leader>dc", ":DapContinue<CR>")
-keymap.set("n", "<leader>dc", ":DapContinue<CR>")
 keymap.set("n", "<leader>o", ":DapStepOver<CR>")
 keymap.set("n", "<leader>i", ":DapStepIn<CR>")
+keymap.set("n", "<leader>do", ":DapStepOut<CR>")
 
 keymap.set("", "<ScrollWheelRight>", "<Nop>", { noremap = true, silent = true })
 keymap.set("", "<ScrollWheelLeft>", "<Nop>", { noremap = true, silent = true })

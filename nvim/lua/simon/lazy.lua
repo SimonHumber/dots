@@ -12,79 +12,31 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	{ import = "simon.core.colorscheme" },
+	{ import = "simon.plugins.lsp.mason" },
+	{ import = "simon.plugins.lsp.lspconfig" },
+	{ import = "simon.plugins.ftplugin.java" },
+	{ import = "simon.plugins.autopairs" },
+	{ import = "simon.plugins.colorizer" },
+	{ import = "simon.plugins.comment" },
+	{ import = "simon.plugins.conform" },
 	{ import = "simon.plugins.dadbod" },
-	"norcalli/nvim-colorizer.lua",
-	"mfussenegger/nvim-jdtls",
-
-	"akinsho/toggleterm.nvim",
-
-	-- THEMES
-	-- to install: solarized and noctis
-	"craftzdog/solarized-osaka.nvim",
-	"folke/tokyonight.nvim",
-	"Mofiqul/dracula.nvim",
-	"ellisonleao/gruvbox.nvim",
-	{ "catppuccin/nvim", as = "catppuccin" },
-	"AlexvZyl/nordic.nvim",
-	{ "bluz71/vim-nightfly-colors", as = "nightfly" },
-	{ "bluz71/vim-moonfly-colors", as = "moonfly" },
-	"tanvirtin/monokai.nvim",
-	"Julpikar/night-owl.nvim",
-	"navarasu/onedark.nvim",
-	"EdenEast/nightfox.nvim",
-	{ "shaunsingh/nord.nvim", as = "nordtheme" },
-	"sainnhe/everforest",
-	"talha-akram/noctis.nvim",
-
-	"lukas-reineke/indent-blankline.nvim", --indent lines
-	"terrortylor/nvim-comment", --commenter
+	{ import = "simon.plugins.dapui" },
+	{ import = "simon.plugins.indent" },
+	{ import = "simon.plugins.gitsigns" },
+	{ import = "simon.plugins.lualine" },
+	{ import = "simon.plugins.nvim-cmp" },
+	{ import = "simon.plugins.nvim-tree" },
+	{ import = "simon.plugins.telescope" },
+	{ import = "simon.plugins.toggleterm" },
+	{ import = "simon.plugins.treesitter" },
+	-- runs automatically, no setup needed
 	"christoomey/vim-tmux-navigator",
 	"szw/vim-maximizer",
-	"tpope/vim-surround",
-	"vim-scripts/ReplaceWithRegister",
-	"nvim-tree/nvim-tree.lua",
-	"nvim-tree/nvim-web-devicons",
-	"nvim-lualine/lualine.nvim",
+	{ "tpope/vim-surround", event = { "BufReadPre", "BufNewFile" } },
+	{ "vim-scripts/ReplaceWithRegister", event = { "BufReadPre", "BufNewFile" } },
 
-	--telescope --also brew install ripgrep for live grep
-	{ "nvim-telescope/telescope.nvim" }, --, 'BurntSushi/ripgrep'
-	"nvim-lua/plenary.nvim",
-	"hrsh7th/nvim-cmp", --autocomplete
-	"hrsh7th/cmp-buffer", --autocomplete from buffer
-	"hrsh7th/cmp-path", --autocomplete for paths -- snippets
-	"L3MON4D3/LuaSnip",
-	"saadparwaiz1/cmp_luasnip",
-	"rafamadriz/friendly-snippets",
-
-	--dap
-{ "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
-	{ "jay-babu/mason-nvim-dap.nvim", dependencies = { "williamboman/mason.nvim", "mfussenegger/nvim-dap" } },
-	"mfussenegger/nvim-dap-python",
-
-	--managing and installing lsp servers
-	"williamboman/mason.nvim",
-	"williamboman/mason-lspconfig.nvim",
 	--configuring lsp servers
-	"neovim/nvim-lspconfig",
-	"hrsh7th/cmp-nvim-lsp",
-	"jose-elias-alvarez/typescript.nvim",
-	"onsails/lspkind.nvim",
-	--fomatting
-	"stevearc/conform.nvim",
 	--linting
-	"mfussenegger/nvim-lint",
-
-	--treesitter
-	{
-		"nvim-treesitter/nvim-treesitter",
-		run = function()
-			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-			ts_update()
-		end,
-	},
-	-- auto closing
-	"windwp/nvim-autopairs", -- autoclose parens, brackets, quotes, etc...
-	{ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }, -- autoclose tags
-	-- git integration
-	"lewis6991/gitsigns.nvim", -- show line modifications on left hand side
+	-- "mfussenegger/nvim-lint",
 })

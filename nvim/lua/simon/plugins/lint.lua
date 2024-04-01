@@ -1,3 +1,4 @@
+--not being used
 local setup, lint = pcall(require, "lint")
 if not setup then
 	return

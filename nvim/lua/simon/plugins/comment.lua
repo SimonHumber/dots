@@ -1,12 +1,14 @@
 -- add this to your lua/plugins.lua, lua/plugins/init.lua,  or the file you keep your other plugins:
 return {
 	"numToStr/Comment.nvim",
-	opts = {
-		-- add any options here
+	dependencies = {
+		"JoosepAlviste/nvim-ts-context-commentstring",
 	},
-	-- cmd = { "CommentToggle" },
+	event = { "BufReadPre", "BufNewFile" },
 	config = function()
+		local ts_context_commentstring = require("ts_context_commentstring.integrations.comment_nvim")
 		require("Comment").setup({
+
 			---Add a space b/w comment and the line
 			padding = true,
 			---Whether the cursor should stay at its position
@@ -46,7 +48,7 @@ return {
 				extra = false,
 			},
 			---Function to call before (un)comment
-			pre_hook = nil,
+			pre_hook = ts_context_commentstring.create_pre_hook(),
 			---Function to call after (un)comment
 			post_hook = nil,
 		})
