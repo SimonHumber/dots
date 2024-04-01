@@ -141,7 +141,7 @@ c_new(){
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # nvm is slow, so instead of above code, use below code to lazy load
 lazy_load_nvm() {
-  unset -f npm node nvm nvim
+  unset -f npm node nvm nvim nodemon
   export NVM_DIR=~/.nvm
   [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
   [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
@@ -165,6 +165,10 @@ nvm() {
 nvim() {
   lazy_load_nvm
   nvim $@
+}
+nodemon(){
+  lazy_load_nvm
+  nodemon $@
 }
 # keybindgs
 bindkey -s '^D' ''
