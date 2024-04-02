@@ -30,13 +30,13 @@ require("lazy").setup({
 	{ import = "simon.plugins.telescope" },
 	{ import = "simon.plugins.toggleterm" },
 	{ import = "simon.plugins.treesitter" },
+	-- { import = "simon.plugins.lint"},
 	-- runs automatically, no setup needed
 	"christoomey/vim-tmux-navigator",
 	"szw/vim-maximizer",
 	{ "tpope/vim-surround", event = { "BufReadPre", "BufNewFile" } },
 	{ "vim-scripts/ReplaceWithRegister", event = { "BufReadPre", "BufNewFile" } },
 
-	--configuring lsp servers
 	--linting
 	-- "mfussenegger/nvim-lint",
 })

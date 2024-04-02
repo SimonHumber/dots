@@ -1,5 +1,5 @@
 return {
 	"NvChad/nvim-colorizer.lua",
-	event = { "BufReadPre", "BufNewFile" },
+	ft = { "javascriptreact", "typescriptreact", "javascript", "typescript", "html", "css" },
 	config = true,
 }
