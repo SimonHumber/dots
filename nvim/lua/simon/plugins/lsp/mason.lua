@@ -44,7 +44,6 @@ return {
 				"google-java-format",
 				"ktlint",
 				"rustfmt",
-				"shfmt",
 				"sql-formatter",
 				"stylua",
 				--dap

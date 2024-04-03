@@ -25,7 +25,6 @@ return {
 				kotlin = { "ktlint" },
 				python = { "black" },
 				lua = { "stylua" },
-				sh = { "shfmt" },
 				sql = { "sql_formatter" },
 			},
 		})
