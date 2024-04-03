@@ -114,9 +114,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias humber="cd ~/Humber/Semester3"
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-20.jdk/Contents/Home
-export PATH=$JAVA_HOME/bin:$PATH
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # source "$HOME/.cargo/env"
@@ -183,4 +180,6 @@ if [ -z "$TERMINFO" ] && [ -z "$TERM_PROGRAM" ]; then
 fi
 alias mongo="brew services start mongodb-community"
 export EDITOR=nvim
+
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
 # zprof
