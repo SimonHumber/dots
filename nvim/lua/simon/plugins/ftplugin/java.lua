@@ -85,7 +85,14 @@ return {
 		-- require("jdtls").test_class()
 		-- require("jdtls").test_nearest_method()
 		-- require("jdtls.dap").setup_dap_main_class_configs()
-		require("jdtls").start_or_attach(config)
+
+		--must be put in autocmd so lsp attaches on every buffer, not just first
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = "java",
+			callback = function()
+				require("jdtls").start_or_attach(config)
+			end,
+		})
 
 		-- vim.keymap.set("n", "<leader>dj", "<Cmd>lua require'jdtls'.test_class()<CR>", { desc = "Organize Imports" })
 		-- vim.keymap.set("n", "<leader>dg", "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", { desc = "Organize Imports" })
