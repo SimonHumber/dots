@@ -28,7 +28,7 @@ return {
 				"kotlin_language_server",
 				"tsserver",
 				"lua_ls",
-				"pyright",
+				"basedpyright",
 				"bashls",
 			},
 		})

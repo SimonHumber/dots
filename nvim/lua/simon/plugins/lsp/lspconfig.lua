@@ -61,7 +61,13 @@ return {
 			on_attach = on_attach,
 		})
 
-		lspconfig["pyright"].setup({
+		lspconfig["basedpyright"].setup({
+			settings = {
+				basedpyright = {
+					-- change to all for VERY strict type checking
+					typeCheckingMode = "basic",
+				},
+			},
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
