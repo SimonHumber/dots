@@ -10,10 +10,21 @@ source ~/.oh-my-zsh/custom/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
+# zstyle ':completion:*'  list-colors '=*=90'
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 alias humber="cd ~/Humber/Semester3"
+#https://www.cyberciti.biz/faq/apple-mac-osx-terminal-color-ls-output-option/
+# export LSCOLORS=Exfxcxdxbxegedabagacad
+# export CLICOLOR=1
+# https://www.bigsoft.co.uk/blog/2008/04/11/configuring-ls_colors
+alias ls="gls --color"
+export LS_COLORS='di=01;34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43'
+#*.pdf=36 to turn pdf files turquoise
+zstyle ':completion:*' list-colors 'di=01;34:ln=35'
+
 c_new(){
   if [ -e $1 ]; then
     echo "Project already exists!"
@@ -74,7 +85,7 @@ bindkey '^N' .down-line-or-history
 if [ -z "$TERMINFO" ] && [ -z "$TERM_PROGRAM" ]; then
   export TERM_PROGRAM="Alacritty"
 fi
-export EDITOR=nvim
+# export EDITOR=nvim
 
 # export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
  # zprof
