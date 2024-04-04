@@ -26,6 +26,7 @@ return {
 				python = { "black" },
 				lua = { "stylua" },
 				sql = { "sql_formatter" },
+				sh = { "shfmt" },
 			},
 		})
 		conform.formatters.sql_formatter = {
