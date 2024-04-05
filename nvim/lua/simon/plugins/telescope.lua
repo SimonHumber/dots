@@ -1,7 +1,7 @@
 return {
 	"nvim-telescope/telescope.nvim", --, 'BurntSushi/ripgrep'
 	dependencies = { "nvim-lua/plenary.nvim" },
-	event = { "BufReadPre", "BufNewFile" },
+	-- event = { "BufReadPre", "BufNewFile" },
 	cmd = { "Telescope" },
 	config = function()
 		local telescope_setup, telescope = pcall(require, "telescope")

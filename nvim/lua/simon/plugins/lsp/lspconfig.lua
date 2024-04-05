@@ -1,7 +1,10 @@
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = { "hrsh7th/cmp-nvim-lsp", "jose-elias-alvarez/typescript.nvim" },
-	event = { "BufReadPre", "BufNewFile" },
+	ft = {
+		"html,htmldjango,css,c,cpp,rust,java,kotlin,javascript,javscriptreact,typescript,typescriptreact,json,go,lua,python,sh,toml",
+	},
+	cmd = { "LspInfo", "LspStart", "LspStop", "LspRestart" },
 	config = function()
 		local lspconfig_status, lspconfig = pcall(require, "lspconfig")
 		if not lspconfig_status then
@@ -33,6 +36,7 @@ return {
 		--used to enable autocompletion
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+		--lsp is not designed for django but still nice for suggestions
 		lspconfig["html"].setup({
 			filetypes = { "html", "htmldjango" },
 			capabilities = capabilities,
@@ -98,6 +102,10 @@ return {
 			on_attach = on_attach,
 		})
 		lspconfig["taplo"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+		lspconfig["jsonls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})

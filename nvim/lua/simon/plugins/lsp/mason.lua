@@ -2,8 +2,11 @@ return {
 	--managing and installing lsp servers
 	"williamboman/mason.nvim",
 	dependencies = { "williamboman/mason-lspconfig.nvim", "WhoIsSethDaniel/mason-tool-installer.nvim" },
-	-- cmd = "Mason",
-	event = { "BufReadPre", "BufNewFile" },
+	cmd = "Mason",
+	-- event = { "BufReadPre", "BufNewFile" },
+	ft = {
+		"html,htmldjango,css,c,cpp,rust,java,kotlin,javascript,javascriptreact,typescript,typescriptreact,json,go,lua,python,sh,toml",
+	},
 	config = function()
 		local mason_status, mason = pcall(require, "mason")
 		if not mason_status then
@@ -24,12 +27,16 @@ return {
 				"html",
 				"cssls",
 				"clangd",
+				"rust_analyzer",
 				"jdtls",
 				"kotlin_language_server",
 				"tsserver",
+				"jsonls",
+				"gopls",
 				"lua_ls",
 				"basedpyright",
 				"bashls",
+				"taplo",
 			},
 		})
 

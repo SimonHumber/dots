@@ -40,7 +40,7 @@ return {
 		vim.api.nvim_create_autocmd("BufWritePre", {
 			pattern = "*",
 			callback = function(args)
-				conform.format({ bufnr = args.buf, timeout_ms = 1000 })
+				conform.format({ bufnr = args.buf, timeout_ms = 500 })
 			end,
 		})
 		-- use leader l to format
