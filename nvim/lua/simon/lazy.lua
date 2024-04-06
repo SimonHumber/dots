@@ -22,21 +22,18 @@ require("lazy").setup({
 	{ import = "simon.plugins.conform" },
 	{ import = "simon.plugins.dadbod" },
 	{ import = "simon.plugins.dapui" },
-	{ import = "simon.plugins.indent" },
 	{ import = "simon.plugins.gitsigns" },
+	{ import = "simon.plugins.indent" },
+	-- { import = "simon.plugins.lint"},
 	{ import = "simon.plugins.lualine" },
 	{ import = "simon.plugins.nvim-cmp" },
 	{ import = "simon.plugins.nvim-tree" },
 	{ import = "simon.plugins.telescope" },
 	{ import = "simon.plugins.toggleterm" },
 	{ import = "simon.plugins.treesitter" },
-	-- { import = "simon.plugins.lint"},
 	-- runs automatically, no setup needed
+	{ "tpope/vim-surround", event = { "BufReadPre", "BufNewFile" } },
 	"christoomey/vim-tmux-navigator",
 	"szw/vim-maximizer",
-	{ "tpope/vim-surround", event = { "BufReadPre", "BufNewFile" } },
-	{ "vim-scripts/ReplaceWithRegister", event = { "BufReadPre", "BufNewFile" } },
-
-	--linting
-	-- "mfussenegger/nvim-lint",
+	-- { "vim-scripts/ReplaceWithRegister", event = { "BufReadPre", "BufNewFile" } },
 })
