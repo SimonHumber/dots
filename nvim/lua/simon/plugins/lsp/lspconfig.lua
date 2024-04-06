@@ -1,6 +1,8 @@
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = { "hrsh7th/cmp-nvim-lsp", "jose-elias-alvarez/typescript.nvim" },
+	-- add this to dependencies for psql lsp (dadbod works without it)
+	-- "nanotee/sqls.nvim",
 	ft = {
 		"html,htmldjango,css,c,cpp,rust,java,kotlin,javascript,javscriptreact,typescript,typescriptreact,json,go,lua,python,sh,toml",
 	},
@@ -109,5 +111,20 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
+		-- require("lspconfig").sqls.setup({
+		-- 	on_attach = function(client, bufnr)
+		-- 		require("sqls").on_attach(client, bufnr) -- require sqls.nvim
+		-- 	end,
+		-- 	settings = {
+		-- 		sqls = {
+		-- 			connections = {
+		-- 				{
+		-- 					driver = "postgresql",
+		-- 					dataSourceName = "host=127.0.0.1 port=5432 user=simontran database=test ",
+		-- 				},
+		-- 			},
+		-- 		},
+		-- 	},
+		-- })
 	end,
 }

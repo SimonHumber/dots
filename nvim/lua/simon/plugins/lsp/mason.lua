@@ -5,7 +5,7 @@ return {
 	cmd = "Mason",
 	-- event = { "BufReadPre", "BufNewFile" },
 	ft = {
-		"html,htmldjango,css,c,cpp,rust,java,kotlin,javascript,javascriptreact,typescript,typescriptreact,json,go,lua,python,sh,toml",
+		"html,htmldjango,css,c,cpp,rust,java,kotlin,javascript,javascriptreact,typescript,typescriptreact,json,go,lua,python,sh,toml,sql",
 	},
 	config = function()
 		local mason_status, mason = pcall(require, "mason")
@@ -46,11 +46,10 @@ return {
 				"black",
 				"clang-format",
 				"djlint",
-				"goimports",
-				"golines",
+				-- "goimports",
+				-- "golines",
 				"google-java-format",
 				"ktlint",
-				"rustfmt",
 				"sql-formatter",
 				"stylua",
 				--dap

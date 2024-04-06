@@ -16,7 +16,8 @@ return {
 				c = { "clang_format" },
 				java = { "google-java-format" },
 				rust = { "rustfmt" },
-				go = { "goimports", "golines" },
+				-- go = { "goimports", "golines" },
+				go = { "gofmt" },
 				javascript = { "prettierd" },
 				javascriptreact = { "prettierd" },
 				typescript = { "prettierd" },
@@ -40,7 +41,7 @@ return {
 		vim.api.nvim_create_autocmd("BufWritePre", {
 			pattern = "*",
 			callback = function(args)
-				conform.format({ bufnr = args.buf, timeout_ms = 500 })
+				conform.format({ bufnr = args.buf, timeout_ms = 1000 })
 			end,
 		})
 		-- use leader l to format
@@ -48,7 +49,7 @@ return {
 			conform.format({
 				lsp_fallback = true,
 				async = false,
-				timeout_ms = 2000,
+				timeout_ms = 3000,
 			})
 		end, { desc = "Format file or range (in visual mode)" })
 	end,
