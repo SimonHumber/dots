@@ -1,4 +1,4 @@
-import=["~/.config/alacritty/themes/themes/solarized-dark-high-contrast.toml"]
+import=["~/.config/alacritty/alacritty-theme/themes/solarized_osaka.toml"]
 [font]
 normal={family="Hack Nerd Font Mono",style="Regular"}
 size=15

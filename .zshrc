@@ -8,7 +8,7 @@ fi
  # zmodload zsh/zprof
 source ~/.oh-my-zsh/custom/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
+# source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 # zstyle ':completion:*'  list-colors '=*=90'
 
@@ -85,7 +85,7 @@ bindkey '^N' .down-line-or-history
 if [ -z "$TERMINFO" ] && [ -z "$TERM_PROGRAM" ]; then
   export TERM_PROGRAM="Alacritty"
 fi
-# export EDITOR=nvim
+export EDITOR="nvim"
 
 # export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
  # zprof
