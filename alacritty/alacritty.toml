@@ -1,16 +1,16 @@
-import=["~/.config/alacritty/alacritty-theme/themes/solarized_osaka.toml"]
+import = ["~/.config/alacritty/alacritty-theme/themes/solarized_osaka.toml"]
 [font]
-normal={family="Hack Nerd Font Mono",style="Regular"}
-size=15
+normal = { family = "Hack Nerd Font Mono", style = "Regular" }
+size = 15
 
 [keyboard]
 
 [window]
-opacity=0.8
-decorations="None"
+opacity = 0.8
+decorations = "None"
 
 [colors]
 transparent_background_colors = true
 
 [mouse]
-hide_when_typing=false
+hide_when_typing = false

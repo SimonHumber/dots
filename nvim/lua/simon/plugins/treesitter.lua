@@ -15,7 +15,7 @@ return {
 				},
 				-- 	-- enable indentation
 				-- 	-- disabled indentation because does not work well with pyright lsp auto-indent
-				indent = { enable = true },
+				indent = { enable = false },
 				-- 	-- enable autotagging (w/ nvim-ts-autotag plugin)
 				autotag = { enable = true },
 				-- 	-- ensure these language parsers are installed

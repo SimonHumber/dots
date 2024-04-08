@@ -28,6 +28,7 @@ return {
 				lua = { "stylua" },
 				sql = { "sql_formatter" },
 				sh = { "shfmt" },
+				toml = { "taplo" },
 			},
 		})
 		conform.formatters.sql_formatter = {
