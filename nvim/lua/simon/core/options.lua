@@ -11,7 +11,14 @@ opt.expandtab = true
 opt.autoindent = true
 
 -- line wrapping
-opt.wrap = false
+local function is_txt_file(filename)
+	return filename:match("%.txt$") ~= nil
+end
+if is_txt_file(vim.fn.expand("%:t")) then
+	opt.wrap = true
+else
+	opt.wrap = false
+end
 
 -- search settings
 opt.ignorecase = true
