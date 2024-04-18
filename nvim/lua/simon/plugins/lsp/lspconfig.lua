@@ -3,10 +3,11 @@ return {
 	dependencies = { "hrsh7th/cmp-nvim-lsp", "jose-elias-alvarez/typescript.nvim" },
 	-- add this to dependencies for psql lsp (dadbod works without it)
 	-- "nanotee/sqls.nvim",
-	ft = {
-		"html,htmldjango,css,c,cpp,rust,java,kotlin,javascript,javscriptreact,typescript,typescriptreact,json,go,lua,python,sh,toml",
-	},
-	cmd = { "LspInfo", "LspStart", "LspStop", "LspRestart" },
+	event = { "BufReadPre", "BufNewFile" },
+	-- ft = {
+	-- 	"html,htmldjango,css,c,cpp,rust,java,kotlin,javascript,javscriptreact,typescript,typescriptreact,json,go,lua,python,sh,toml",
+	-- },
+	-- cmd = { "LspInfo", "LspStart", "LspStop", "LspRestart" },
 	config = function()
 		local lspconfig_status, lspconfig = pcall(require, "lspconfig")
 		if not lspconfig_status then

@@ -1,8 +1,8 @@
 return {
-	"craftzdog/solarized-osaka.nvim",
+	-- "craftzdog/solarized-osaka.nvim",
 	-- THEMES
 	-- to install: noctis
-	-- "folke/tokyonight.nvim",
+	"folke/tokyonight.nvim",
 	-- "Mofiqul/dracula.nvim",
 	-- "ellisonleao/gruvbox.nvim",
 	-- { "catppuccin/nvim", as = "catppuccin" },
@@ -26,9 +26,9 @@ return {
 		-- })
 		-- vim.g.nightflyTransparent = true
 		-- vim.g.moonflyTransparent = true
-		-- require("tokyonight").setup({
-		-- 	transparent = true,
-		-- })
+		require("tokyonight").setup({
+			transparent = true,
+		})
 		-- require("gruvbox").setup({
 		-- 	transparent_mode = true,
 		-- })
@@ -38,10 +38,10 @@ return {
 		-- require("nightfox").setup({ options = {
 		-- 	transparent = true,
 		-- } })
-		require("solarized-osaka").setup({
-			transparent = false,
-		})
-		local status, _ = pcall(vim.cmd, "colorscheme solarized-osaka")
+		-- require("solarized-osaka").setup({
+		-- 	transparent = false,
+		-- })
+		local status, _ = pcall(vim.cmd, "colorscheme tokyonight-moon")
 		if not status then
 			print("Color scheme not found!")
 			return

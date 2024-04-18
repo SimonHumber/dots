@@ -94,8 +94,8 @@ return {
 			end,
 		})
 
-		-- vim.keymap.set("n", "<leader>jr", "<Cmd>JdtWipeData<CR>", { desc = "Wipe data and reset" })
-		vim.keymap.set("n", "<leader>jr", "<Cmd>JdtReset<CR>", { desc = "Reset configs" })
+		vim.keymap.set("n", "<leader>jr", "<Cmd>JdtWipeData<CR>", { desc = "Wipe data and reset" })
+		-- vim.keymap.set("n", "<leader>jr", "<Cmd>JdtRestart<CR>", { desc = "Reset configs" })
 		-- vim.keymap.set("n", "<leader>dj", "<Cmd>lua require'jdtls'.test_class()<CR>", { desc = "Organize Imports" })
 		-- vim.keymap.set("n", "<leader>dg", "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", { desc = "Organize Imports" })
 		-- vim.keymap.set('n', '<leader>co', "<Cmd>lua require'jdtls'.organize_imports()<CR>", { desc = 'Organize Imports' })
