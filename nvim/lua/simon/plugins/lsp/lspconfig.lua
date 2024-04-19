@@ -112,6 +112,17 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
+		-- seems like it's deprecated
+		lspconfig["ltex"].setup({
+			filetypes = { "text", "markdown" },
+			capabilities = capabilities,
+			on_attach = on_attach,
+			settings = {
+				ltex = {
+					language = "en-CA",
+				},
+			},
+		})
 		-- require("lspconfig").sqls.setup({
 		-- 	on_attach = function(client, bufnr)
 		-- 		require("sqls").on_attach(client, bufnr) -- require sqls.nvim

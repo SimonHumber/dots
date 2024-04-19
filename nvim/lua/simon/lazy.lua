@@ -24,7 +24,7 @@ require("lazy").setup({
 	{ import = "simon.plugins.dapui" },
 	{ import = "simon.plugins.gitsigns" },
 	{ import = "simon.plugins.indent" },
-	-- { import = "simon.plugins.lint"},
+	{ import = "simon.plugins.lint" },
 	{ import = "simon.plugins.lualine" },
 	{ import = "simon.plugins.nvim-cmp" },
 	{ import = "simon.plugins.nvim-tree" },

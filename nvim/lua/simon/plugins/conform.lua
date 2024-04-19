@@ -7,7 +7,7 @@ return {
 		if not setup then
 			return
 		end
-		local sql_config_file = os.getenv("HOME") .. "/.config/sql_formatter/sql_formatter.json"
+		-- local sql_config_file = os.getenv("HOME") .. "/.config/sql_formatter/sql_formatter.json"
 		conform.setup({
 			formatters_by_ft = {
 				html = { "prettierd" },
@@ -36,6 +36,11 @@ return {
 				"--config",
 				'{"language":"postgresql","keywordCase":"upper","dataTypeCase":"upper","functionCase":"upper"}',
 				-- "indentStyle":"tabularLeft",
+			},
+		}
+		conform.formatters.clang_format = {
+			prepend_args = {
+				-- "-style=google",
 			},
 		}
 		--format on save
