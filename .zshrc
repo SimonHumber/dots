@@ -25,55 +25,55 @@ export LS_COLORS='di=01;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg
 #*.pdf=36 to turn pdf files turquoise
 zstyle ':completion:*' list-colors 'di=01;36:ln=35'
 
-c_new(){
-  if [ -e $1 ]; then
-    echo "Project already exists!"
-  else
-    mkdir $1
-    touch $1/main.c
-    echo "#include <stdio.h>">>$1/main.c
-    echo "#include <stdlib.h>">>$1/main.c
-    echo "">>$1/main.c
-    echo "int main(int argc, char*argv[]){">>$1/main.c
-    echo "">>$1/main.c
-    echo "  return EXIT_SUCCESS;">>$1/main.c
-    echo "}">>$1/main.c
-  fi
-}
+# c_new(){
+#   if [ -e $1 ]; then
+#     echo "Project already exists!"
+#   else
+#     mkdir $1
+#     touch $1/main.c
+#     echo "#include <stdio.h>">>$1/main.c
+#     echo "#include <stdlib.h>">>$1/main.c
+#     echo "">>$1/main.c
+#     echo "int main(int argc, char*argv[]){">>$1/main.c
+#     echo "">>$1/main.c
+#     echo "  return EXIT_SUCCESS;">>$1/main.c
+#     echo "}">>$1/main.c
+#   fi
+# }
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # nvm is slow, so instead of above code, use below code to lazy load
-lazy_load_nvm() {
-  unset -f npm node nvm nvim nodemon
-  export NVM_DIR=~/.nvm
-  [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
-  [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
-}
-
- npm() {
-  lazy_load_nvm
-  npm $@
- }
-
-node() {
-  lazy_load_nvm
-  node $@
-}
-
-nvm() {
-  lazy_load_nvm
-  node $@
-  nvm $@
-}
-nvim() {
-  lazy_load_nvm
-  nvim $@
-}
-nodemon(){
-  lazy_load_nvm
-  nodemon $@
-}
+# lazy_load_nvm() {
+#   unset -f npm node nvm nvim nodemon
+#   export NVM_DIR=~/.nvm
+#   [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+#   [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+# }
+#
+#  npm() {
+#   lazy_load_nvm
+#   npm $@
+#  }
+#
+# node() {
+#   lazy_load_nvm
+#   node $@
+# }
+#
+# nvm() {
+#   lazy_load_nvm
+#   node $@
+#   nvm $@
+# }
+# nvim() {
+#   lazy_load_nvm
+#   nvim $@
+# }
+# nodemon(){
+#   lazy_load_nvm
+#   nodemon $@
+# }
 # keybindgs
 bindkey -s '^D' ''
 # bindkey '^R' .history-incremental-search-backward

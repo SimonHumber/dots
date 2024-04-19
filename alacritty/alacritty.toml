@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/alacritty-theme/themes/solarized_osaka.toml"]
+import = ["~/.config/alacritty/alacritty-theme/themes/tokyo-night.toml"]
 [font]
 normal = { family = "Hack Nerd Font Mono", style = "Regular" }
 size = 15
