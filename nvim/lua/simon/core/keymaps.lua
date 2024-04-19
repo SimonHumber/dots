@@ -49,6 +49,22 @@ keymap.set("n", "<leader>o", ":DapStepOver<CR>")
 keymap.set("n", "<leader>i", ":DapStepIn<CR>")
 keymap.set("n", "<leader>do", ":DapStepOut<CR>")
 
+local function is_txt_file(filename)
+	return filename:match("%.txt$") ~= nil
+end
+if is_txt_file(vim.fn.expand("%:t")) then
+	keymap.set("n", "j", "gj")
+	keymap.set("n", "k", "gk")
+	keymap.set("n", "0", "g0")
+	keymap.set("n", "^", "g^")
+	keymap.set("n", "$", "g$")
+	keymap.set("v", "j", "gj")
+	keymap.set("v", "k", "gk")
+	keymap.set("v", "0", "g0")
+	keymap.set("v", "^", "g^")
+	keymap.set("v", "$", "g$")
+end
+
 keymap.set("", "<ScrollWheelRight>", "<Nop>", { noremap = true, silent = true })
 keymap.set("", "<ScrollWheelLeft>", "<Nop>", { noremap = true, silent = true })
 
