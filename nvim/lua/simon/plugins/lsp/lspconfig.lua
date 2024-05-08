@@ -112,6 +112,10 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
+		lspconfig["tailwindcss"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
 		-- seems like it's deprecated
 		lspconfig["ltex"].setup({
 			filetypes = { "text", "markdown" },

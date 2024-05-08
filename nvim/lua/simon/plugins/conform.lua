@@ -14,6 +14,7 @@ return {
 				htmldjango = { "djlint" },
 				css = { "prettierd" },
 				c = { "clang_format" },
+				cpp = { "clang_format" },
 				java = { "google-java-format" },
 				rust = { "rustfmt" },
 				-- go = { "goimports", "golines" },
@@ -40,7 +41,7 @@ return {
 		}
 		conform.formatters.clang_format = {
 			prepend_args = {
-				-- "-style=google",
+				"-style=google",
 			},
 		}
 		--format on save

@@ -26,8 +26,8 @@ return {
 		-- 	end
 		-- 	return "󱉶 " .. table.concat(linters, ", ")
 		-- end
-		-- vim.keymap.set("n", "<leader>i", function()
-		-- 	lint.try_lint()
-		-- end, { desc = "Trigger linting for current file" })
+		vim.keymap.set("n", "<leader>l", function()
+			lint.try_lint()
+		end, { desc = "Trigger linting for current file" })
 	end,
 }
