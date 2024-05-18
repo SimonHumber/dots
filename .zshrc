@@ -15,7 +15,7 @@ source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-alias humber="cd ~/Humber/Semester3"
+alias humber="cd ~/Humber/Semester4"
 #https://www.cyberciti.biz/faq/apple-mac-osx-terminal-color-ls-output-option/
 # export LSCOLORS=Exfxcxdxbxegedabagacad
 # export CLICOLOR=1
@@ -87,5 +87,5 @@ if [ -z "$TERMINFO" ] && [ -z "$TERM_PROGRAM" ]; then
 fi
 export EDITOR="nvim"
 
-# export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
  # zprof
