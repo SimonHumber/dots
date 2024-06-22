@@ -7,12 +7,12 @@ return {
 	-- "ellisonleao/gruvbox.nvim",
 	-- { "catppuccin/nvim", as = "catppuccin" },
 	-- "AlexvZyl/nordic.nvim",
-	"bluz71/vim-nightfly-colors",
+	-- "bluz71/vim-nightfly-colors",
 	-- { "bluz71/vim-moonfly-colors", as = "moonfly" },
 	-- "tanvirtin/monokai.nvim",
 	-- "Julpikar/night-owl.nvim",
 	-- "navarasu/onedark.nvim",
-	-- "EdenEast/nightfox.nvim",
+	"EdenEast/nightfox.nvim",
 	-- { "shaunsingh/nord.nvim", as = "nordtheme" },
 	-- "sainnhe/everforest",
 	-- "talha-akram/noctis.nvim",
@@ -41,7 +41,7 @@ return {
 		-- require("solarized-osaka").setup({
 		-- 	transparent = false,
 		-- })
-		local status, _ = pcall(vim.cmd, "colorscheme nightfly")
+		local status, _ = pcall(vim.cmd, "colorscheme nightfox")
 		if not status then
 			print("Color scheme not found!")
 			return

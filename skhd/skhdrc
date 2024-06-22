@@ -10,9 +10,10 @@ cmd+shift - d : yabai -m space --mirror y-axis
 cmd+shift - w : yabai -m space --mirror x-axis
 cmd+shift - p : yabai -m window --toggle float --grid 4:4:1:1:2:2
 cmd+shift - m : yabai -m window --toggle zoom-fullscreen
+cmd+shift - n : yabai -m window --toggle zoom-parent
 
-cmd+shift - o : yabai -m window --space next; yabai -m window --focus recent
-cmd + shift - u : yabai -m window --space prev; yabai -m window --focus recent
+cmd+shift - o : yabai -m window --space next --focus
+cmd + shift - u : yabai -m window --space prev --focus
 
 cmd + shift - g : yabai --start-service
 cmd + shift - f : yabai --stop-service

@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/alacritty-theme/themes/nightfly.toml"]
+import = ["~/.config/alacritty/alacritty-theme/themes/nightfox.toml"]
 [font]
 normal = { family = "Hack Nerd Font Mono", style = "Regular" }
 size = 15
