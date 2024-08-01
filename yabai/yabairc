@@ -9,6 +9,7 @@ yabai -m config mouse_action1 move
 #yabai -m mouse_drop_action swap
 
 #yabai -m config top_padding 10
+yabai -m config top_padding 2
 yabai -m config bottom_padding 10
 yabai -m config left_padding 10
 yabai -m config right_padding 10
