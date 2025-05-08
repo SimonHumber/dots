@@ -88,4 +88,6 @@ fi
 export EDITOR="nvim"
 
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
+#use this code when java is updated
+#sudo ln -sfn $(brew --prefix openjdk)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
  # zprof
