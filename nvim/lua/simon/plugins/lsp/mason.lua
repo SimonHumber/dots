@@ -29,7 +29,6 @@ return {
 				"clangd",
 				"rust_analyzer",
 				"jdtls",
-				"kotlin_language_server",
 				"tsserver",
 				"jsonls",
 				"gopls",
