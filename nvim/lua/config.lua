@@ -39,3 +39,4 @@ opt.splitbelow = true
 
 opt.iskeyword:append("-")
 
+opt.termguicolors = true

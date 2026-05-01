@@ -1,9 +1,6 @@
 -- 0. Run config file
---
---
 require("config")
 require("keymaps")
-vim.opt.termguicolors = true
 
 -- 1. Register/Download Plugins
 vim.pack.add({
@@ -19,6 +16,10 @@ vim.pack.add({
   { src = "https://github.com/lewis6991/gitsigns.nvim.git" },
   { src = "https://github.com/kylechui/nvim-surround.git" },
   { src = "https://github.com/lukas-reineke/indent-blankline.nvim.git" },
+  {
+    src = 'https://github.com/Saghen/blink.cmp',
+    version = vim.version.range('*')
+  },
 })
 
 -- Force Neovim to recognize the plugins added above before requiring them
@@ -43,4 +44,6 @@ vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "vtsls" })
 vim.lsp.config("basedpyright", {
   settings = { basedpyright = { analysis = { typeCheckingMode = "basic" }, }, },
 })
-local keymap = vim.keymap -- for conciseness
+
+-- Autocomplete
+require('blink.cmp').setup({ keymap = { preset = 'super-tab' }, })
