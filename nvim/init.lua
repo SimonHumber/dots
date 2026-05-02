@@ -36,11 +36,11 @@ require("colorizer").setup()
 require("nvim-autopairs").setup()
 require("nvim-surround").setup()
 require("gitsigns").setup()
-require("ibl").setup()
+require("ibl").setup() -- takes up 100ms startup in ts
 
 -- LSP
 require("mason").setup()
-vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "vtsls" })
+vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "vtsls", "jsonls" })
 vim.lsp.config("basedpyright", {
   settings = { basedpyright = { analysis = { typeCheckingMode = "basic" }, }, },
 })

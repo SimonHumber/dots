@@ -40,3 +40,5 @@ opt.splitbelow = true
 opt.iskeyword:append("-")
 
 opt.termguicolors = true
+
+vim.g.loaded_python3_provider = 0 -- speeds up python startup
