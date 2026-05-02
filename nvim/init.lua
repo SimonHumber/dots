@@ -15,7 +15,6 @@ vim.pack.add({
   { src = "https://github.com/EdenEast/nightfox.nvim.git" },
   { src = "https://github.com/lewis6991/gitsigns.nvim.git" },
   { src = "https://github.com/kylechui/nvim-surround.git" },
-  { src = "https://github.com/lukas-reineke/indent-blankline.nvim.git" },
   {
     src = 'https://github.com/Saghen/blink.cmp',
     version = vim.version.range('*')
@@ -36,14 +35,32 @@ require("colorizer").setup()
 require("nvim-autopairs").setup()
 require("nvim-surround").setup()
 require("gitsigns").setup()
-require("ibl").setup() -- takes up 100ms startup in ts
 
 -- LSP
 require("mason").setup()
-vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "vtsls", "jsonls" })
+vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "vtsls", "jsonls", "vue_ls", "gopls" })
 vim.lsp.config("basedpyright", {
   settings = { basedpyright = { analysis = { typeCheckingMode = "basic" }, }, },
 })
+vim.lsp.config["vue_ls"] = { init_options = { vue = { hybridMode = true } } }
+local vue_plugin_path =
+"/Users/simontran/.local/share/nvim/mason/packages/vue-language-server/node_modules/@vue/language-server"
+vim.lsp.config["vtsls"] = {
+  filetypes = { "javascript", "typescript", "vue" },
+  settings = {
+    vtsls = {
+      tsserver = {
+        globalPlugins = {
+          {
+            name = "@vue/typescript-plugin",
+            location = vue_plugin_path,
+            languages = { "vue" },
+          },
+        },
+      },
+    },
+  },
+}
 
 -- Autocomplete
 require('blink.cmp').setup({ keymap = { preset = 'super-tab' }, })
