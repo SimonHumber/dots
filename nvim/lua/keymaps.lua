@@ -38,3 +38,13 @@ keymap("n", "<leader>gr", vim.lsp.buf.references)
 keymap("n", "<leader>N", vim.diagnostic.goto_prev)
 keymap("n", "<leader>n", vim.diagnostic.goto_next)
 keymap("n", "<space>gl", vim.diagnostic.setloclist)
+
+vim.api.nvim_create_user_command('LspInfo', 'checkhealth vim.lsp', {})
+
+-- Manual refresh: check disk and redraw
+vim.keymap.set('n', '<Esc>', function()
+    vim.schedule(function()
+        vim.cmd('checktime')
+    end)
+    return '<Esc>'
+end, { expr = true, silent = true })

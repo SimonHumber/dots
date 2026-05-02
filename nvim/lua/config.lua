@@ -11,12 +11,12 @@ opt.expandtab = true
 
 -- line wrapping
 local function is_txt_file(filename)
-	return filename:match("%.txt$") ~= nil
+  return filename:match("%.txt$") ~= nil
 end
 if is_txt_file(vim.fn.expand("%:t")) then
-	opt.wrap = true
+  opt.wrap = true
 else
-	opt.wrap = false
+  opt.wrap = false
 end
 
 -- search settings
