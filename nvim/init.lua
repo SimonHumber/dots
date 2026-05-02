@@ -64,3 +64,7 @@ vim.lsp.config["vtsls"] = {
 
 -- Autocomplete
 require('blink.cmp').setup({ keymap = { preset = 'super-tab' }, })
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'go', "python", "javascript", "typescript" },
+  callback = function() vim.treesitter.start() end,
+})
