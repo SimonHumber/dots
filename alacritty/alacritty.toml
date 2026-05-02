@@ -1,9 +1,9 @@
+[general]
 import = ["~/.config/alacritty/alacritty-theme/themes/nightfox.toml"]
+
 [font]
 normal = { family = "Hack Nerd Font Mono", style = "Regular" }
 size = 15
-
-[keyboard]
 
 [window]
 opacity = 0.8
@@ -14,3 +14,9 @@ transparent_background_colors = true
 
 [mouse]
 hide_when_typing = false
+
+[keyboard]
+bindings = [
+  # for tmux 
+  { key = "B", mods = "Command", chars = "\u0002" }
+]
