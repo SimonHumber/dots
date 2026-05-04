@@ -37,6 +37,7 @@ if [ -z "$TERMINFO" ] && [ -z "$TERM_PROGRAM" ]; then
   export TERM_PROGRAM="Alacritty"
 fi
 export EDITOR="nvim"
+bindkey -e
 alias pack="cd /Users/simontran/.local/share/nvim/site/pack/core/opt"
 alias o="opencode"
 

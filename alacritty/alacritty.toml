@@ -18,5 +18,5 @@ hide_when_typing = false
 [keyboard]
 bindings = [
   # for tmux 
-  { key = "B", mods = "Command", chars = "\u0002" }
+  { key = "B", mods = "Command", chars = "\x1f" }
 ]
