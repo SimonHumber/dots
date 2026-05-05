@@ -38,33 +38,16 @@ require("gitsigns").setup()
 
 -- LSP
 require("mason").setup()
-vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "vtsls", "jsonls", "vue_ls", "gopls" })
-vim.lsp.config("basedpyright", {
-  settings = { basedpyright = { analysis = { typeCheckingMode = "basic" }, }, },
-})
-vim.lsp.config["vue_ls"] = { init_options = { vue = { hybridMode = true } } }
-local vue_plugin_path =
-"/Users/simontran/.local/share/nvim/mason/packages/vue-language-server/node_modules/@vue/language-server"
-vim.lsp.config["vtsls"] = {
-  filetypes = { "javascript", "typescript", "vue" },
-  settings = {
-    vtsls = {
-      tsserver = {
-        globalPlugins = {
-          {
-            name = "@vue/typescript-plugin",
-            location = vue_plugin_path,
-            languages = { "vue" },
-          },
-        },
-      },
-    },
-  },
+vim.lsp.enable({ "lua_ls", "ty", "ruff", "vtsls", "jsonls", "gopls", "postgres_lsp" })
+vim.lsp.config["postgres_lsp"] = {
+  cmd = { vim.fn.expand("~/.local/share/nvim/mason/bin/postgres-language-server"), "lsp-proxy" },
+  workspace_required = false,
+  root_markers = { vim.fn.stdpath("config") .. "/postgres-language-server.jsonc" },
 }
 
--- Autocomplete
+-- Autocomplete and treesitter
 require('blink.cmp').setup({ keymap = { preset = 'super-tab' }, })
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'go', "python", "javascript", "typescript" },
+  pattern = { 'go', "python", "javascript", "typescript", "sql" },
   callback = function() vim.treesitter.start() end,
 })

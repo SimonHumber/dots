@@ -1,0 +1,6 @@
+{
+  "$schema": "https://pg-language-server.com/latest/schema.json",
+  "format": {
+    "enabled": true
+  }
+}
