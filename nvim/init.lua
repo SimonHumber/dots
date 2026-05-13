@@ -46,12 +46,30 @@ require("gitsigns").setup()
 
 -- LSP
 require("mason").setup()
-vim.lsp.enable({ "lua_ls", "ty", "ruff", "vtsls", "jsonls", "gopls", "postgres_lsp", "rust_analyzer" })
+vim.lsp.enable({ "lua_ls", "ty", "ruff", "vtsls", "jsonls", "gopls", "postgres_lsp", "rust_analyzer", "vue_ls" })
 vim.lsp.config["rust_analyzer"] = { settings = { ["rust-analyzer"] = { diagnostics = { experimental = { enable = true } } } } }
 vim.lsp.config["postgres_lsp"] = {
   cmd = { vim.fn.expand("~/.local/share/nvim/mason/bin/postgres-language-server"), "lsp-proxy" },
   workspace_required = false,
   root_markers = { vim.fn.stdpath("config") .. "/postgres-language-server.jsonc" },
+}
+local vue_plugin_path =
+    vim.fn.expand("~/.local/share/nvim/mason/packages/vue-language-server/node_modules/@vue/typescript-plugin/")
+vim.lsp.config["vtsls"] = {
+  filetypes = { "javascript", "typescript", "vue" },
+  settings = {
+    vtsls = {
+      tsserver = {
+        globalPlugins = {
+          {
+            name = "@vue/typescript-plugin",
+            location = vue_plugin_path,
+            languages = { "vue" },
+          },
+        },
+      },
+    },
+  },
 }
 -- Error message next to code
 vim.diagnostic.config({ virtual_text = true })
@@ -60,6 +78,6 @@ vim.diagnostic.config({ virtual_text = true })
 require('blink.cmp').setup({ keymap = { preset = 'super-tab' }, })
 -- :set filetype? to check filetype
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'go', "python", "javascript", "typescript", "sql", "toml", "rust", "typescriptreact", "javascriptreact" },
+  pattern = { 'go', "python", "javascript", "typescript", "sql", "toml", "rust", "vue" },
   callback = function() vim.treesitter.start() end,
 })
