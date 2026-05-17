@@ -1,22 +1,22 @@
 #changing window focus
-cmd+shift - j : yabai -m window --focus south
-cmd+shift - k : yabai -m window --focus north
-cmd+shift - h : yabai -m window --focus west
-cmd+shift - l : yabai -m window --focus east
+alt+shift - j : yabai -m window --focus south
+alt+shift - k : yabai -m window --focus north
+alt+shift - h : yabai -m window --focus west
+alt+shift - l : yabai -m window --focus east
 
 #modifying layout of screen
-cmd+shift - s : yabai -m space --rotate 270
-cmd+shift - d : yabai -m space --mirror y-axis
-cmd+shift - w : yabai -m space --mirror x-axis
-cmd+shift - p : yabai -m window --toggle float --grid 4:4:1:1:2:2
-cmd+shift - m : yabai -m window --toggle zoom-fullscreen
-cmd+shift - n : yabai -m window --toggle zoom-parent
+alt+shift - s : yabai -m space --rotate 270
+alt+shift - d : yabai -m space --mirror y-axis
+alt+shift - w : yabai -m space --mirror x-axis
+alt+shift - p : yabai -m window --toggle float --grid 4:4:1:1:2:2
+alt+shift - m : yabai -m window --toggle zoom-fullscreen
+alt+shift - n : yabai -m window --toggle zoom-parent
 
-cmd+shift - o : yabai -m window --space next --focus
-cmd + shift - u : yabai -m window --space prev --focus
+alt+shift - o : yabai -m window --space next --focus
+alt + shift - u : yabai -m window --space prev --focus
 
-cmd + shift - g : yabai --start-service
-cmd + shift - f : yabai --stop-service
+alt + shift - g : yabai --start-service
+alt + shift - f : yabai --stop-service
 
 #rotate big window when 3 windows are on screen
-cmd+shift - r : yabai -m window first --swap next && yabai -m window first --swap last
+alt+shift - r : yabai -m window first --swap next && yabai -m window first --swap last

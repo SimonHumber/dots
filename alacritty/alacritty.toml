@@ -1,5 +1,5 @@
 [general]
-import = ["~/.config/alacritty/alacritty-theme/themes/nightfox.toml"]
+import = ["~/.config/alacritty/alacritty-theme/themes/tokyo_night_enhanced.toml"]
 
 [font]
 normal = { family = "Hack Nerd Font Mono", style = "Regular" }
